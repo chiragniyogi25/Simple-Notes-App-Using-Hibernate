@@ -24,6 +24,7 @@
 
 				<%
 					Session s = FactoryProvider.getFactory().openSession();
+					/* from Note is an entity name  */
 					Query q = s.createQuery("from Note");//does the select query from the Note entity
 					List<Note> list = q.list();//gets the data in the form of list
 					for (Note note : list) {
